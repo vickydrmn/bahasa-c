@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main () {
+	
+	int ProgD, Kal, PTI, Orkom ;
+	float x;
+	char Nama_Mahasiswa [50];
+	printf("Masukan Mama Mahasiswa:") ;
+	gets (Nama_Mahasiswa);
+	
+	printf("Masukan Nilai Program Dasar:");
+	scanf("%d", &ProgD);
+	
+	printf("Masukan Nilai Kalkulus:");
+	scanf("%d", &Kal) ;
+	
+	printf("Masukan Nilai PTI:");
+	scanf("%d", &PTI);
+	
+	printf("Masukan Nilai Orkom:");
+	scanf("%d", &Orkom);
+	
+	x=(ProgD+Kal+PTI+Orkom) /4;
+	
+	if(x>=75){
+	   	printf("SELAMAT %s ANDA LULUS", Nama_Mahasiswa);
+
+		printf("\n");
+		printf("SEMANGAT dan JANGAN CEPAT PUAS");
+
+	}
+	else
+	{   
+		printf("MAAF %s ANDA BELUM LULUS", Nama_Mahasiswa);
+		printf("\n");
+		printf("JANGAN MENANGIS dan TETAP BERUSAHA");
+	
+	printf("\n");
+	printf("bila terjadi kesalahan tolong hubungi 888");
+	}
+	return 0;		
+}
