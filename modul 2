@@ -1,0 +1,80 @@
+#include <stdio.h>
+
+
+float hasilvolumetabung(float phi, int r, int tt){
+	float volumetabung;
+	volumetabung = phi * r * r * tt;
+	return volumetabung;
+}
+
+float hasilluaspermukaantabung(float phi, int r, int tt){
+	float luaspermukaantabung;
+	luaspermukaantabung = 2 * phi * r * (r + tt);
+	return luaspermukaantabung;
+}
+int hasilvolumebalok(int p, int l, int tb){
+	int volumebalok;
+	volumebalok = p * l * tb;
+	return volumebalok;
+}
+
+float hasilluasdpermukaanbalok(float phi, int l, int tb){
+	float luaspermukaanbalok;
+	luaspermukaanbalok  = 2 * (phi * l + phi * l + l * tb);
+	return luaspermukaanbalok;
+}
+
+int hasilvolumekubus(int s){
+	int volumekubus;
+	volumekubus = s * s * s;
+	return volumekubus;
+}
+
+int hasilluaspermukaankubus(int s){
+	int luaspermukaankubus;
+	luaspermukaankubus = 6 * s * s;
+	return luaspermukaankubus;
+}
+
+int main(){
+	float phi = 3.14;
+	int r = 6;
+	int tt = 8;
+	int tb = 9;
+	int p = 10;
+	int l = 9;
+	int s = 10;
+	float volumetabung;
+	float luaspermukaantabung;
+	int volumebalok;
+	float luaspermukaanbalok;
+	int volumekubus;
+	int luaspermukaankubus;
+	
+	volumetabung = hasilvolumetabung(phi, r, tt);
+	printf("hasil volume tabung = %.2f", volumetabung);
+	printf ("\n");
+	
+	luaspermukaantabung = hasilluaspermukaantabung(phi, r, tt);
+	printf("hasil luas permukaan tabung  = %.2f", luaspermukaantabung);
+	printf ("\n \n");	
+	
+	volumebalok = hasilvolumebalok(p, l, tb);
+	printf("hasil volume balok = %d", volumebalok);
+	printf ("\n");
+	
+	luaspermukaanbalok = hasilluasdpermukaanbalok(phi, l, tb);
+	printf("hasil luas permukaan balok = %.2f", luaspermukaantabung);
+	printf ("\n \n");
+	
+	volumekubus = hasilvolumekubus(s);
+	printf("hasil volume kubus = %d", volumekubus);
+	printf ("\n");
+	
+	luaspermukaankubus = hasilluaspermukaankubus(s);
+	printf("hasil luas permukaan kubus = %d", luaspermukaankubus);
+	printf ("\n");
+	return 0;
+		
+}
+
